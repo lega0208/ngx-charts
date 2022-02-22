@@ -20,6 +20,14 @@
   }
 
   .horizontal-legend {
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-left: 10px;
+
+    &.legend-labels {
+      width: calc(100% - 10px);
+    }
+
     li {
       display: inline-block;
     }

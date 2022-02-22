@@ -21,11 +21,15 @@ export function calculateViewDimensions({
   let chartWidth = width;
   let chartHeight = height - margins[0] - margins[2];
 
-  if (showLegend && legendPosition === LegendPosition.Right) {
-    if (legendType === ScaleType.Ordinal) {
-      columns -= 2;
-    } else {
-      columns -= 1;
+  if (showLegend) {
+    if (legendPosition === 'right') {
+      if (legendType === 'ordinal') {
+        columns -= 2;
+      } else {
+        columns -= 1;
+      }
+    } else if (legendPosition === 'below') {
+      chartHeight -= 100;
     }
   }
 
