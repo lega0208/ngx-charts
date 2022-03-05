@@ -85,7 +85,7 @@ export class ChartComponent implements OnChanges {
           legendColumns = 2;
         }
       } else if (this.legendOptions && this.legendOptions.position === 'below') {
-        this.chartHeight = this.view[1] - 100;
+        this.chartHeight = this.view[1] - 60;
       }
     }
 
